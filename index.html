@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Singhal's Dental Clinic | Rohini Sector 24, Delhi — Gentle, World-Class Dentistry</title>
+  <meta name="description" content="Dr. Singhal's Dental Clinic, 191, Pocket 12, Sector 24, Rohini, Delhi 110085. Dr. Varun Singhal — precise, gentle and patient dentistry: cavity and wisdom tooth care, clear communication, top-notch facilities at reasonable prices. 3.8★ on Google. Open till 8 PM. Call 98999 44388." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%236E9CC6'/%3E%3Cpath d='M16 7l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z' fill='%23F5F8FB'/%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mist: "#F5F8FB",
+            navy: "#1E3246",
+            denim: "#6E9CC6",
+            haze: "#D7E3EE",
+            hazelight: "#ECF3F9",
+            pebble: "#DCE4EC",
+            azure: "#3D719D",
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', "serif"],
+            body: ['"Source Sans 3"', "sans-serif"],
+          },
+          boxShadow: {
+            soft: "0 4px 6px -1px rgba(30, 50, 70, 0.05)",
+            medium: "0 10px 15px -3px rgba(30, 50, 70, 0.05)",
+            large: "0 20px 40px -10px rgba(30, 50, 70, 0.05)",
+            bloom: "0 25px 50px -12px rgba(30, 50, 70, 0.15)",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <style>
+    body { font-family: "Source Sans 3", sans-serif; background-color: #F5F8FB; color: #1E3246; }
+
+    /* ---- Paper grain (the soul of the design) ---- */
+    .grain {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+    }
+
+    /* ---- Gentle scroll reveal ---- */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .reveal.is-in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; }
+    .d3 { transition-delay: 0.3s; } .d4 { transition-delay: 0.4s; }
+
+    /* ---- Mobile menu slide-in ---- */
+    #mobileMenu { transform: translateY(-12px); opacity: 0; pointer-events: none; transition: transform 0.5s ease-out, opacity 0.5s ease-out; }
+    #mobileMenu.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+
+    /* ---- Accessible focus ---- */
+    a:focus-visible, button:focus-visible { outline: 2px solid #6E9CC6; outline-offset: 3px; border-radius: 9999px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      #mobileMenu { transition: none; }
+    }
+  </style>
+</head>
+
+<body class="bg-mist text-navy antialiased selection:bg-denim/30">
+
+  <!-- Paper grain overlay -->
+  <div class="grain pointer-events-none fixed inset-0 z-50 opacity-[0.015]" aria-hidden="true"></div>
+
+  <!-- ======================= NAV ======================= -->
+  <header class="fixed inset-x-0 top-0 z-40 border-b border-pebble/80 bg-mist/80 backdrop-blur-sm">
+    <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 md:h-20" aria-label="Main">
+      <a href="#top" class="flex items-center gap-3">
+        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-denim/20">
+          <i data-lucide="stethoscope" class="h-4 w-4 text-navy"></i>
+        </span>
+        <span class="font-display text-xl font-semibold tracking-tight">Dr. Singhal's <em class="font-medium italic text-denim">Dental Clinic</em></span>
+      </a>
+
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="#about" class="text-sm uppercase tracking-widest text-navy/70 transition-colors duration-300 hover:text-azure">About</a>
+        <a href="#services" class="text-sm uppercase tracking-widest text-navy/70 transition-colors duration-300 hover:text-azure">Services</a>
+        <a href="#reviews" class="text-sm uppercase tracking-widest text-navy/70 transition-colors duration-300 hover:text-azure">Reviews</a>
+        <a href="#visit" class="text-sm uppercase tracking-widest text-navy/70 transition-colors duration-300 hover:text-azure">Visit Us</a>
+        <a href="tel:+919899944388" class="inline-flex h-11 items-center gap-2 rounded-full bg-navy px-6 text-sm uppercase tracking-widest text-white shadow-medium transition-all duration-300 hover:bg-azure hover:shadow-large">
+          <i data-lucide="phone" class="h-4 w-4"></i> Book a Visit
+        </a>
+      </div>
+
+      <button id="menuBtn" class="flex h-11 w-11 items-center justify-center rounded-full border border-pebble bg-white/60 md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span id="menuIconOpen"><i data-lucide="menu" class="h-5 w-5"></i></span>
+        <span id="menuIconClose" class="hidden"><i data-lucide="x" class="h-5 w-5"></i></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobileMenu" class="fixed inset-0 z-30 flex flex-col justify-center bg-mist/[0.98] px-8 backdrop-blur-sm md:hidden">
+    <nav class="flex flex-col gap-6 text-center" aria-label="Mobile">
+      <a href="#about" class="font-display text-3xl font-medium">About</a>
+      <a href="#services" class="font-display text-3xl font-medium">Services</a>
+      <a href="#reviews" class="font-display text-3xl font-medium">Reviews</a>
+      <a href="#visit" class="font-display text-3xl font-medium">Visit Us</a>
+      <div class="mt-6 flex flex-col gap-4">
+        <a href="tel:+919899944388" class="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-navy text-sm uppercase tracking-widest text-white">
+          <i data-lucide="phone" class="h-4 w-4"></i> Call 98999 44388
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Dr+Singhals+Dental+Clinic+Rohini+Sector+24+Delhi" target="_blank" rel="noopener" class="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-denim text-sm uppercase tracking-widest text-denim">
+          <i data-lucide="map-pin" class="h-4 w-4"></i> Google Maps
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="top">
+
+    <!-- ======================= HERO ======================= -->
+    <section class="relative overflow-hidden px-4 pt-28 sm:px-6 md:pt-40 lg:px-8">
+      <!-- soft arch backdrop -->
+      <div class="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[34rem] w-[54rem] -translate-x-1/2 rounded-t-full bg-hazelight" aria-hidden="true"></div>
+
+      <div class="mx-auto max-w-3xl text-center">
+        <div class="reveal">
+          <p class="font-body text-xs uppercase tracking-[0.35em] text-denim md:text-sm">Dr. Singhal's Dental Clinic</p>
+          <p class="mt-2 text-sm text-navy/50">डॉ.सिंघल'से डेंटल क्लिनिक · Rohini, Delhi</p>
+        </div>
+
+        <h1 class="reveal d1 mt-6 font-display text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
+          Dentistry that puts you at <em class="font-medium italic text-azure">ease</em>
+        </h1>
+
+        <p class="reveal d2 mx-auto mt-8 max-w-xl text-lg leading-relaxed text-navy/70">
+          A calm, cheerful clinic in Rohini Sector 24 where Dr. Varun's gentle, precise work
+          takes care of everything from cavities to wisdom teeth — with clear communication,
+          top-notch facilities and reasonable prices.
+        </p>
+
+        <!-- Rating pill -->
+        <div class="reveal d3 mt-8 inline-flex items-center gap-3 rounded-full border border-pebble bg-white/70 px-6 py-3 shadow-soft backdrop-blur-sm">
+          <span class="flex items-center gap-0.5" aria-label="Rated 3.8 out of 5">
+            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure opacity-60" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-pebble" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+          </span>
+          <span class="font-display text-lg font-semibold">3.8</span>
+          <span class="h-4 w-px bg-pebble" aria-hidden="true"></span>
+          <span class="text-sm text-navy/60">12 Google reviews</span>
+        </div>
+
+        <!-- ============ GOOGLE MAPS + CALL ============ -->
+        <div class="reveal d4 mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Dr+Singhals+Dental+Clinic+Rohini+Sector+24+Delhi"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex h-12 items-center gap-3 rounded-full bg-navy px-8 text-sm uppercase tracking-widest text-white shadow-medium transition-all duration-300 hover:bg-azure hover:shadow-large"
+          >
+            <i data-lucide="map-pin" class="h-4 w-4"></i>
+            Open in Google Maps
+          </a>
+          <a
+            href="tel:+919899944388"
+            class="inline-flex h-12 items-center gap-3 rounded-full border border-denim px-8 text-sm uppercase tracking-widest text-denim transition-colors duration-300 hover:bg-denim/10"
+          >
+            <i data-lucide="phone" class="h-4 w-4"></i>
+            Call 98999 44388
+          </a>
+        </div>
+        <p class="reveal d4 mx-auto mt-5 max-w-xl text-sm text-navy/50">
+          Open · Closes 8 PM · 191, Pocket 12, Sector 24, Rohini, Delhi 110085 · Plus code P3HR+G2
+        </p>
+      </div>
+
+      <!-- meandering vine divider -->
+      <svg viewBox="0 0 1440 96" fill="none" class="mx-auto mt-20 h-14 w-full max-w-7xl text-denim/50 md:mt-28" aria-hidden="true" preserveAspectRatio="none">
+        <path d="M0 48 C 240 -8, 480 104, 720 48 S 1200 -8, 1440 48" stroke="currentColor" stroke-width="1"/>
+        <circle cx="720" cy="48" r="3" fill="currentColor"/>
+        <circle cx="240" cy="17" r="2" fill="currentColor"/>
+        <circle cx="1200" cy="17" r="2" fill="currentColor"/>
+      </svg>
+    </section>
+
+    <!-- ======================= STATS ======================= -->
+    <section class="px-4 py-16 sm:px-6 md:py-24 lg:px-8">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-y-12 md:grid-cols-4">
+        <div class="reveal border-pebble px-6 text-center md:border-r">
+          <p class="font-display text-5xl font-semibold md:text-6xl">3.8</p>
+          <p class="mt-3 text-sm uppercase tracking-widest text-navy/60">Google rating</p>
+        </div>
+        <div class="reveal d1 border-pebble px-6 text-center md:border-r">
+          <p class="font-display text-5xl font-semibold md:text-6xl">12</p>
+          <p class="mt-3 text-sm uppercase tracking-widest text-navy/60">Google reviews</p>
+        </div>
+        <div class="reveal d2 border-pebble px-6 text-center md:border-r">
+          <p class="font-display text-5xl font-semibold md:text-6xl">3<span class="italic text-azure">/</span>3</p>
+          <p class="mt-3 text-sm uppercase tracking-widest text-navy/60">Summaries praise the doctor</p>
+        </div>
+        <div class="reveal d3 border-pebble px-6 text-center">
+          <p class="font-display text-5xl font-semibold md:text-6xl">8:00<span class="italic text-azure">&nbsp;PM</span></p>
+          <p class="mt-3 text-sm uppercase tracking-widest text-navy/60">Closes nightly</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= ABOUT / DENTIST ======================= -->
+    <section id="about" class="scroll-mt-24 px-4 py-16 sm:px-6 md:py-32 lg:px-8">
+      <div class="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
+        <div class="text-center lg:text-left">
+          <p class="reveal text-xs uppercase tracking-[0.35em] text-denim md:text-sm">Meet your dentist</p>
+          <h2 class="reveal d1 mt-6 font-display text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            Precise, gentle, <em class="italic text-azure">patient</em>
+          </h2>
+          <p class="reveal d2 mt-8 text-lg leading-relaxed text-navy/70">
+            Sahil calls him <em class="font-display italic">excellent — very precise, gentle, and
+            patient</em>: he "took the time to cure all my dental problem" and sorted a cavity
+            and wisdom tooth issue without pain. Anil says Dr. Varun is <em class="font-display
+            italic">calm, cheerful, and incredibly gentle</em>, making every visit stress-free
+            and pleasant.
+          </p>
+          <div class="reveal d3 mt-10 flex items-start gap-4 rounded-3xl border border-pebble bg-white/70 p-6 shadow-soft text-left">
+            <i data-lucide="message-circle" class="mt-1 h-6 w-6 shrink-0 text-denim"></i>
+            <p class="text-navy/70">
+              <span class="font-semibold text-navy">Friendly demeanor, clear communication</span>
+              — the kind that "instantly puts you at ease," from the first consultation to the
+              final check-up.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid gap-8">
+          <!-- Dr. Varun Singhal -->
+          <article class="reveal d1 group overflow-hidden rounded-3xl border border-pebble bg-white p-8 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-large">
+            <div class="flex items-center gap-5">
+              <span class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-denim/15 font-display text-2xl font-semibold text-azure">V</span>
+              <div>
+                <h3 class="font-display text-2xl font-semibold">Dr. Varun Singhal</h3>
+                <p class="mt-1 text-sm uppercase tracking-widest text-denim">Dental Surgeon</p>
+              </div>
+            </div>
+            <p class="mt-5 text-sm leading-relaxed text-navy/60">
+              "A calm, cheerful, and incredibly gentle dentist who makes every visit
+              stress-free and pleasant." Patients leave feeling "very well taken care of."
+            </p>
+            <a href="tel:+919899944388" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-azure transition-colors duration-300 hover:underline">
+              <i data-lucide="phone" class="h-4 w-4"></i> 98999 44388
+            </a>
+          </article>
+
+          <!-- Facilities card -->
+          <article class="reveal d2 group overflow-hidden rounded-3xl border border-pebble bg-white p-8 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-large">
+            <div class="flex items-center gap-5">
+              <span class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-haze">
+                <i data-lucide="building-2" class="h-6 w-6 text-azure"></i>
+              </span>
+              <div>
+                <h3 class="font-display text-2xl font-semibold">Well-equipped, world-class</h3>
+                <p class="mt-1 text-sm uppercase tracking-widest text-denim">A patient's own words</p>
+              </div>
+            </div>
+            <p class="mt-5 text-sm leading-relaxed text-navy/60">
+              "Well-equipped with top-notch facilities. It is conveniently located and offers
+              world-class treatment" — right in Rohini Sector 24.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SERVICES ======================= -->
+    <section id="services" class="scroll-mt-24 px-4 py-16 sm:px-6 md:py-32 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <p class="reveal text-xs uppercase tracking-[0.35em] text-denim md:text-sm">What we do</p>
+          <h2 class="reveal d1 mt-6 font-display text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            Care without the <em class="italic text-azure">stress</em>
+          </h2>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">
+          <!-- even cards staggered at md+ -->
+          <div class="reveal">
+            <article class="h-full rounded-3xl border border-pebble bg-white p-8 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-large">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-denim/15">
+                <i data-lucide="scan-line" class="h-5 w-5 text-navy"></i>
+              </span>
+              <h3 class="mt-6 font-display text-2xl font-semibold">Cavity Treatment</h3>
+              <p class="mt-3 leading-relaxed text-navy/60">
+                "I did not feel any pain and got rid of my cavity" — precise, gentle work on
+                decay, done right the first time.
+              </p>
+            </article>
+          </div>
+          <div class="reveal d1 md:translate-y-12">
+            <article class="h-full rounded-3xl border border-pebble bg-white p-8 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-large">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-denim/15">
+                <i data-lucide="anchor" class="h-5 w-5 text-navy"></i>
+              </span>
+              <h3 class="mt-6 font-display text-2xl font-semibold">Wisdom Tooth Care</h3>
+              <p class="mt-3 leading-relaxed text-navy/60">
+                Wisdom tooth issues handled "without any pain" — assessment, extraction and
+                recovery, all explained clearly beforehand.
+              </p>
+            </article>
+          </div>
+          <div class="reveal d2">
+            <article class="h-full rounded-3xl border border-pebble bg-white p-8 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-large">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-denim/15">
+                <i data-lucide="clipboard-list" class="h-5 w-5 text-navy"></i>
+              </span>
+              <h3 class="mt-6 font-display text-2xl font-semibold">Complete Dental Solutions</h3>
+              <p class="mt-3 leading-relaxed text-navy/60">
+                "They took the time to cure all my dental problem" — thorough treatment plans
+                that don't stop at the obvious issue.
+              </p>
+            </article>
+          </div>
+          <div class="reveal md:translate-y-12">
+            <article class="h-full rounded-3xl border border-pebble bg-white p-8 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-large">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-denim/15">
+                <i data-lucide="message-circle" class="h-5 w-5 text-navy"></i>
+              </span>
+              <h3 class="mt-6 font-display text-2xl font-semibold">Clear Communication</h3>
+              <p class="mt-3 leading-relaxed text-navy/60">
+                "Friendly demeanor and clear communication instantly put you at ease" — you'll
+                always know what's happening and why.
+              </p>
+            </article>
+          </div>
+          <div class="reveal d1">
+            <article class="h-full rounded-3xl border border-pebble bg-white p-8 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-large">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-denim/15">
+                <i data-lucide="badge-check" class="h-5 w-5 text-navy"></i>
+              </span>
+              <h3 class="mt-6 font-display text-2xl font-semibold">Top-notch Facilities</h3>
+              <p class="mt-3 leading-relaxed text-navy/60">
+                "Well-equipped with top-notch facilities" and "world-class treatment" in a
+                conveniently located Sector 24 clinic.
+              </p>
+            </article>
+          </div>
+          <div class="reveal d2 md:translate-y-12">
+            <article class="h-full rounded-3xl border border-pebble bg-white p-8 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-large">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-denim/15">
+                <i data-lucide="smile" class="h-5 w-5 text-navy"></i>
+              </span>
+              <h3 class="mt-6 font-display text-2xl font-semibold">Stress-free Visits</h3>
+              <p class="mt-3 leading-relaxed text-navy/60">
+                "Makes every visit stress-free and pleasant" — calm, cheerful care for anyone
+                seeking a positive dental experience.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= REVIEWS ======================= -->
+    <section id="reviews" class="scroll-mt-24 bg-hazelight/60 px-4 py-16 sm:px-6 md:py-32 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="reveal text-xs uppercase tracking-[0.35em] text-denim md:text-sm">Word of mouth</p>
+          <h2 class="reveal d1 mt-6 font-display text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            Well taken <em class="italic text-azure">care of</em>
+          </h2>
+          <p class="reveal d2 mt-6 text-lg text-navy/70">
+            3.8 across 12 Google reviews — here is what patients highlight.
+          </p>
+
+          <!-- Google summary quotes -->
+          <div class="reveal d2 mx-auto mt-8 grid max-w-5xl gap-4 sm:grid-cols-3">
+            <blockquote class="rounded-3xl border border-pebble bg-white/70 p-5 font-display text-lg italic leading-snug text-navy/80">
+              "Very nice doctor, good treatment at reasonable price"
+            </blockquote>
+            <blockquote class="rounded-3xl border border-pebble bg-white/70 p-5 font-display text-lg italic leading-snug text-navy/80">
+              "Their friendly demeanor and clear communication instantly put you at ease."
+            </blockquote>
+            <blockquote class="rounded-3xl border border-pebble bg-white/70 p-5 font-display text-lg italic leading-snug text-navy/80">
+              "It is conveniently located and offers world-class treatment."
+            </blockquote>
+          </div>
+
+          <div class="reveal d2 mt-6 flex flex-wrap justify-center gap-3">
+            <span class="rounded-full border border-pebble bg-white px-5 py-2 text-sm text-navy/70">Doctor · 2</span>
+            <span class="rounded-full border border-pebble bg-white px-5 py-2 text-sm text-navy/70">Gentle &amp; precise</span>
+            <span class="rounded-full border border-pebble bg-white px-5 py-2 text-sm text-navy/70">Reasonable price</span>
+            <span class="rounded-full border border-pebble bg-white px-5 py-2 text-sm text-navy/70">World-class treatment</span>
+          </div>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <article class="reveal flex h-full flex-col rounded-3xl border border-pebble bg-white p-8 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-large">
+            <i data-lucide="quote" class="h-6 w-6 text-haze"></i>
+            <div class="mt-4 flex gap-0.5" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+            </div>
+            <p class="mt-5 flex-1 font-display text-lg italic leading-relaxed text-navy/80">
+              "Excellent dentist! Very precise, gentle, and patient. They took the time to cure
+              all my dental problem and did a fantastic job. I felt very well taken care of. I
+              did not feel any pain and got rid of my cavity and wisdom tooth issue."
+            </p>
+            <footer class="mt-6 border-t border-pebble pt-4">
+              <p class="font-semibold">Sahil Gautam</p>
+              <p class="text-sm text-navy/50">2 reviews · 6 months ago</p>
+            </footer>
+          </article>
+
+          <article class="reveal d1 flex h-full flex-col rounded-3xl border border-pebble bg-white p-8 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-large">
+            <i data-lucide="quote" class="h-6 w-6 text-haze"></i>
+            <div class="mt-4 flex gap-0.5" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+            </div>
+            <p class="mt-5 flex-1 font-display text-lg italic leading-relaxed text-navy/80">
+              "Dr. Varun is a calm, cheerful, and incredibly gentle dentist who makes every
+              visit stress-free and pleasant. Their friendly demeanor and clear communication
+              instantly put you at ease. Highly recommended for anyone seeking a positive
+              dental experience!"
+            </p>
+            <footer class="mt-6 border-t border-pebble pt-4">
+              <p class="font-semibold">Anil Gupta</p>
+              <p class="text-sm text-navy/50">7 reviews · a year ago</p>
+            </footer>
+          </article>
+
+          <article class="reveal d2 flex h-full flex-col rounded-3xl border border-pebble bg-white p-8 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-large">
+            <i data-lucide="quote" class="h-6 w-6 text-haze"></i>
+            <div class="mt-4 flex gap-0.5" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-azure" aria-hidden="true"><path d="M12 2l2.9 6.26 6.85.59-5.2 4.5 1.56 6.7L12 16.4 5.89 20.05l1.56-6.7-5.2-4.5 6.85-.59L12 2z"/></svg>
+            </div>
+            <p class="mt-5 flex-1 font-display text-lg italic leading-relaxed text-navy/80">
+              "This clinic is well-equipped with top-notch facilities. It is conveniently
+              located and offers world-class treatment."
+            </p>
+            <footer class="mt-6 border-t border-pebble pt-4">
+              <p class="font-semibold">Shilpa Jharia</p>
+              <p class="text-sm text-navy/50">2 reviews · 17 photos · a year ago</p>
+            </footer>
+          </article>
+        </div>
+
+        <div class="reveal d3 mt-12 text-center">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Dr+Singhals+Dental+Clinic+Rohini+Sector+24+Delhi"
+            target="_blank"
+            rel="noopener"
+            class="group inline-flex items-center gap-2 text-sm uppercase tracking-widest text-denim transition-colors duration-300 hover:text-azure"
+          >
+            Read all 12 reviews on Google
+            <i data-lucide="arrow-right" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= VISIT ======================= -->
+    <section id="visit" class="scroll-mt-24 px-4 py-16 sm:px-6 md:py-32 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <p class="reveal text-xs uppercase tracking-[0.35em] text-denim md:text-sm">Plan your visit</p>
+          <h2 class="reveal d1 mt-6 font-display text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            Come say <em class="italic text-azure">hello</em>
+          </h2>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <!-- Timings -->
+          <div class="reveal rounded-3xl border border-pebble bg-white p-8 shadow-soft md:p-10">
+            <div class="flex items-center gap-3">
+              <i data-lucide="clock" class="h-5 w-5 text-denim"></i>
+              <h3 class="font-display text-2xl font-semibold">Clinic timings</h3>
+            </div>
+            <dl class="mt-8 space-y-4">
+              <div class="flex items-center justify-between border-b border-pebble pb-4">
+                <dt class="text-navy/70">Status</dt>
+                <dd class="font-semibold">Open · Closes 8 PM</dd>
+              </div>
+              <div class="flex items-center justify-between border-b border-pebble pb-4">
+                <dt class="text-navy/70">Full weekly hours</dt>
+                <dd><a href="https://www.google.com/maps/search/?api=1&query=Dr+Singhals+Dental+Clinic+Rohini+Sector+24+Delhi" target="_blank" rel="noopener" class="font-semibold text-azure transition-colors duration-300 hover:underline">See on Google</a></dd>
+              </div>
+              <div class="flex items-center justify-between border-b border-pebble pb-4">
+                <dt class="text-navy/70">Location</dt>
+                <dd class="font-semibold">Pocket 12, Sector 24, Rohini</dd>
+              </div>
+              <div class="flex items-center justify-between">
+                <dt class="text-navy/70">Appointments</dt>
+                <dd><a href="tel:+919899944388" class="font-semibold text-azure transition-colors duration-300 hover:underline">98999 44388</a></dd>
+              </div>
+            </dl>
+            <p class="mt-8 flex items-start gap-3 rounded-2xl bg-hazelight p-4 text-sm text-navy/60">
+              <i data-lucide="clock" class="mt-0.5 h-4 w-4 shrink-0 text-denim"></i>
+              Google currently lists the clinic as open, closing at 8 PM — evenings work here.
+              The full weekly schedule isn't published, so a quick call before you visit is the
+              surest way to plan your appointment.
+            </p>
+          </div>
+
+          <!-- Find us -->
+          <div class="reveal d1 flex flex-col rounded-[40px] bg-navy p-8 text-mist shadow-bloom md:p-10">
+            <div class="flex items-center gap-3">
+              <i data-lucide="map-pin" class="h-5 w-5 text-denim"></i>
+              <h3 class="font-display text-2xl font-semibold">Find us</h3>
+            </div>
+            <p class="mt-8 text-lg leading-relaxed text-mist/80">
+              Dr. Singhal's Dental Clinic<br />
+              191, Pocket 12, Sector 24,<br />
+              Rohini, Delhi — 110085
+            </p>
+            <p class="mt-4 text-sm text-mist/50">Plus code: P3HR+G2 Delhi</p>
+
+            <div class="mt-8 space-y-3">
+              <a href="tel:+919899944388" class="flex items-center gap-3 text-mist/80 transition-colors duration-300 hover:text-white">
+                <i data-lucide="phone" class="h-4 w-4 text-denim"></i> 98999 44388 <span class="text-sm text-mist/40">· Appointments</span>
+              </a>
+            </div>
+
+            <div class="mt-auto flex flex-col gap-4 pt-10 sm:flex-row">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Dr+Singhals+Dental+Clinic+Rohini+Sector+24+Delhi"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex h-12 flex-1 items-center justify-center gap-3 rounded-full bg-mist px-8 text-sm uppercase tracking-widest text-navy transition-all duration-300 hover:bg-azure hover:text-white"
+              >
+                <i data-lucide="navigation" class="h-4 w-4"></i>
+                Get Directions
+              </a>
+              <a
+                href="tel:+919899944388"
+                class="inline-flex h-12 items-center justify-center gap-3 rounded-full border border-mist/30 px-8 text-sm uppercase tracking-widest text-mist/80 transition-colors duration-300 hover:border-denim hover:text-white"
+              >
+                Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="border-t border-pebble px-4 py-12 sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col items-center gap-8 text-center md:flex-row md:justify-between md:text-left">
+      <div>
+        <p class="font-display text-2xl font-semibold">Dr. Singhal's <em class="italic text-denim">Dental Clinic</em></p>
+        <p class="mt-1 text-sm text-navy/50">डॉ.सिंघल'से डेंटल क्लिनिक · Rohini, Delhi</p>
+      </div>
+      <nav class="flex flex-wrap items-center justify-center gap-6 text-sm uppercase tracking-widest text-navy/60" aria-label="Footer">
+        <a href="#about" class="transition-colors duration-300 hover:text-azure">About</a>
+        <a href="#services" class="transition-colors duration-300 hover:text-azure">Services</a>
+        <a href="#reviews" class="transition-colors duration-300 hover:text-azure">Reviews</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Dr+Singhals+Dental+Clinic+Rohini+Sector+24+Delhi" target="_blank" rel="noopener" class="transition-colors duration-300 hover:text-azure">Maps</a>
+      </nav>
+      <p class="text-sm text-navy/40">© <span id="year">2026</span> Dr. Singhal's Dental Clinic, Delhi</p>
+    </div>
+  </footer>
+
+  <script>
+    // Icons
+    lucide.createIcons({ attrs: { "stroke-width": 1.5 } });
+
+    // Gentle scroll reveals
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+    // Mobile menu
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const iconOpen = document.getElementById("menuIconOpen");
+    const iconClose = document.getElementById("menuIconClose");
+    function setMenu(open) {
+      mobileMenu.classList.toggle("open", open);
+      menuBtn.setAttribute("aria-expanded", String(open));
+      iconOpen.classList.toggle("hidden", open);
+      iconClose.classList.toggle("hidden", !open);
+      document.body.style.overflow = open ? "hidden" : "";
+    }
+    menuBtn.addEventListener("click", () => setMenu(!mobileMenu.classList.contains("open")));
+    mobileMenu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
